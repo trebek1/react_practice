@@ -11,6 +11,12 @@
 	<script type="text/jsx">
 
 	var App = React.createClass({
+		
+		getInitialState: function(){
+			return{
+				txt: "a new initial state text"
+			}
+		},
 		getDefaultProps: function(){
 			return{
 				txt: "This is the default prop",
@@ -28,6 +34,7 @@
 					<h1> Hello World </h1> 
 					<b> BOLD </b>
 					<h2> {txt} </h2> 
+					<h3> {this.state.txt} </h3>
 				</div>
 				)
 		}
