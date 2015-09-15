@@ -17,6 +17,9 @@
 				txt: "a new initial state text"
 			}
 		},
+		update: function(e){
+		this.setState({txt: e.target.value})
+		},
 		getDefaultProps: function(){
 			return{
 				txt: "This is the default prop",
@@ -31,6 +34,7 @@
 			var txt = this.props.txt
 			return (
 				<div>
+					<input type="text" onChange={this.update} />
 					<h1> Hello World </h1> 
 					<b> BOLD </b>
 					<h2> {txt} </h2> 
