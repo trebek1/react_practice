@@ -16,12 +16,13 @@
 				<div>
 					<h1> Hello World </h1> 
 					<b> BOLD </b>
+					<h2> {this.props.txt} </h2> 
 				</div>
 				)
 		}
 	});
 
-	React.render(<App />, document.body)
+	React.render(<App txt = "This is a prop text" />, document.body)
 	</script> 
 
 	// <script> 
