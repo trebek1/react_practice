@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/jsx">
+
+	// var App = React.createClass({
+	// 	render: function(){
+	// 		return <h1> Hello World </h1> 
+	// 	}
+	// });
+
+	// React.render(<App />, document.body)
+	</script> 
+
+	<script> 
+		var App = React.createClass({
+			render:function(){
+				return React.createElement("h1",null, "Hello There")
+			}
+		}) 
+		React.render(React.createElement(App), document.body)
+	</script> 
+</body>
+</html>
