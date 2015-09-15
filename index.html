@@ -10,22 +10,27 @@
 <body>
 	<script type="text/jsx">
 
-	// var App = React.createClass({
-	// 	render: function(){
-	// 		return <h1> Hello World </h1> 
-	// 	}
-	// });
+	var App = React.createClass({
+		render: function(){
+			return (
+				<div>
+					<h1> Hello World </h1> 
+					<b> BOLD </b>
+				</div>
+				)
+		}
+	});
 
-	// React.render(<App />, document.body)
+	React.render(<App />, document.body)
 	</script> 
 
-	<script> 
-		var App = React.createClass({
-			render:function(){
-				return React.createElement("h1",null, "Hello There")
-			}
-		}) 
-		React.render(React.createElement(App), document.body)
-	</script> 
+	// <script> 
+	// 	var App = React.createClass({
+	// 		render:function(){
+	// 			return React.createElement("h1",null, "Hello There")
+	// 		}
+	// 	}) 
+	// 	React.render(React.createElement(App), document.body)
+	// </script> 
 </body>
 </html>
