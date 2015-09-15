@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/jsx">
+
+	var Button = React.createClass({
+		getInitialState:function(){
+			
+			return {val: 0}
+		},
+		update: function(){
+			this.setState({val: this.state.val+1}) 
+		},
+		componentWillMount:function(){
+			console.log('mounting'); 
+		},
+		render: function(){
+			console.log('rendering'); 
+			return <button onClick={this.update}>{this.state.val}</button>
+		},
+		componentdidMount:function(){
+			console.log('mounted')
+		},
+
+	}); 
+	React.render(<Button />, document.body)
+	</script> 
+</body>
+</html>
