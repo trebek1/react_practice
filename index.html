@@ -11,18 +11,29 @@
 	<script type="text/jsx">
 
 	var App = React.createClass({
+		getDefaultProps: function(){
+			return{
+				txt: "This is the default prop",
+				cat: 0
+			}
+		},
+		propTypes: {
+			txt: React.PropTypes.string,
+			cat: React.PropTypes.number.isRequired
+		},
 		render: function(){
+			var txt = this.props.txt
 			return (
 				<div>
 					<h1> Hello World </h1> 
 					<b> BOLD </b>
-					<h2> {this.props.txt} </h2> 
+					<h2> {txt} </h2> 
 				</div>
 				)
 		}
 	});
 
-	React.render(<App txt = "This is a prop text" />, document.body)
+	React.render(<App txt = "This is a prop text" cat = {5} />, document.body)
 	</script> 
 
 	// <script> 
